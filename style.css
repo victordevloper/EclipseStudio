@@ -1,0 +1,332 @@
+@font-face {
+  font-family: "LemonLight";
+  src: url("./fonts/LEMONMILK-Light.otf");
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  background-color: #0F0F14;
+  scroll-behavior: smooth;
+}
+
+header{
+  position: fixed;
+  width: 100%;
+  padding-inline: 16px;
+  background-color: #0F0F14;
+}
+
+section{
+  min-height: 80vh;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+h1{
+  text-align: center;
+  font-family: "LemonLight";
+  font-size: 100px;
+  padding-top: 250px;
+  color: #E71E64;
+}
+h2{
+  text-align: center;
+  font-family: "LemonLight";
+  font-size: 75px;
+  color: #fff;
+}
+
+h3{
+  font-family: "LemonLight";
+  color: #E71E64;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+h4{
+  padding-top: 100px;
+  color: #E71E64;
+  font-size: 50px;
+  font-family: "LemonLight";
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h5{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#Servicos{
+  background-color: #0F0F14;
+}
+
+#Contato{
+  background-color: #0F0F14;
+}
+
+.sobre{
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 700px;
+}
+
+.content{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+  width: 300px;
+  padding: 20px;
+}
+
+p{
+  color: #E71E64;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.imagem{
+  width: 100px;
+  padding-left: 100px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.nav{
+  max-width: 1280px;
+  height: 70px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list{
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-list a{
+  font-size: 18px;
+  color: #fff;
+  padding-block: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.hamburguer{
+  display: none;
+  border: none;
+  background: none;
+  border-top: 3px solid #fff;
+  cursor: pointer;
+}
+
+.hamburguer::before,
+.hamburguer::after{
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin-top: 5px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.app{
+  position: fixed;
+  width: 100%;
+  height: 50%;
+}
+
+
+a:hover{
+  color: #E71E64;
+}
+
+form{
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+section.formulario{
+  padding-bottom: 40px;
+}
+
+form input, form textarea{
+  width: 100%;
+  background-color: #242424;
+  border: 0;
+  outline: 0;
+  padding: 20px 15px;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 18px;
+} 
+
+form textarea{
+  resize: none;
+  height: 200px;
+}
+
+form .btn-enviar{
+  margin-top: 20px;
+  text-align: center;
+}
+
+form .btn-enviar input{
+  width: 120px;
+  background-color: #E71E64;
+  color: #0F0F14;
+  font-weight: 700;
+  cursor: pointer;
+}
+span{
+  color: #fff;
+}
+
+@media (max-width: 750px) {
+  header{
+    position: fixed;
+    width: 93%;
+  }
+
+  html{
+    width: 100%;
+  }
+
+  h1{
+    text-align: center;
+    font-family: "LemonLight";
+    font-size: 30px;
+    padding-top: 290px;
+    color: #E71E64;
+  }
+
+  h2{
+    text-align: center;
+    font-family: "LemonLight";
+    font-size: 25px;
+    color: #fff;
+  }  
+
+  h4{
+    padding-top: 100px;
+    color: #E71E64;
+    font-size: 30px;
+    font-family: "LemonLight";
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  h5{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }  
+
+  .sobre{
+    margin: 0 auto;
+    width: 300px;
+  }
+
+  .hamburguer{
+    display: block;
+    z-index: 1;
+  }
+
+  .nav-list{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+    clip-path: circle(100px at 90% -15%);
+    transition: 1s ease-out;
+
+    background: #0F0F14;
+    pointer-events: none;
+  }
+
+  .nav.active .nav-list{
+    clip-path: circle(1500px at 90% -15%);
+    pointer-events: all;
+  }
+
+  .nav.active .nav-list a{
+    opacity: 1;
+  }
+
+  .nav.active .hamburguer{
+    position: fixed;
+    top: 26px;
+    right: 16px;
+    border-top-color: transparent;
+  }
+
+  .nav.active .hamburguer::before{
+    transform: rotate(135deg);
+  }
+
+  .nav.active .hamburguer::after{
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+  
+  .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 50px 1px 1px 1px;
+    padding: 0;
+  }
+  
+  p{
+    color: #E71E64;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  .imagem{
+    width: 40px;
+    padding-left: 45px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+}
